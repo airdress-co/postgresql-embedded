@@ -37,10 +37,7 @@ test-log = { workspace = true }
 tokio = { workspace = true, features = ["full"] }
 
 [features]
-default = [
-    "native-tls",
-    "theseus",
-]
+default = ["native-tls"]
 blocking = ["tokio"]
 bundled = ["postgresql_archive/github"]
 indicatif = [
