@@ -14,6 +14,7 @@ jobs:
   # Release unpublished packages.
   release-plz-release:
     name: Release-plz release
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -33,6 +34,7 @@ jobs:
   # Create a PR with the new versions and changelog, preparing the next release.
   release-plz-pr:
     name: Release-plz PR
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     concurrency:
       group: release-plz-${{ github.ref }}
